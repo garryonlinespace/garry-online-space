@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -5,6 +6,13 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+
+// Service Pages
+import ForexTrading from "./pages/services/ForexTrading";
+import BinaryOptions from "./pages/services/BinaryOptions";
+import CryptoTrading from "./pages/services/CryptoTrading";
+import BettingSkills from "./pages/services/BettingSkills";
+import AffiliateMarketing from "./pages/services/AffiliateMarketing";
 
 const queryClient = new QueryClient();
 
@@ -16,7 +24,11 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/forex" element={<ForexTrading />} />
+          <Route path="/binary-options" element={<BinaryOptions />} />
+          <Route path="/crypto-trading" element={<CryptoTrading />} />
+          <Route path="/betting-skills" element={<BettingSkills />} />
+          <Route path="/affiliate-marketing" element={<AffiliateMarketing />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
