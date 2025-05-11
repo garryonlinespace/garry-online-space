@@ -12,6 +12,11 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center gap-2">
           <Link to="/" className="text-white text-2xl font-bold flex items-center">
+            <img 
+              src="/lovable-uploads/b8b2c2c0-7c13-43bb-94d8-47016c3456a7.png" 
+              alt="Garry Online Space Logo" 
+              className="h-10 w-10 mr-2"
+            />
             <span className="text-secondary">Garry</span> 
             <span className="text-white">Online Space</span>
           </Link>
