@@ -5,7 +5,6 @@ import Services from "@/components/Services";
 import AboutFounder from "@/components/AboutFounder";
 import Testimonials from "@/components/Testimonials";
 import CTASection from "@/components/CTASection";
-import ContactInfo from "@/components/ContactInfo";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -18,7 +17,6 @@ const Index = () => {
         <AboutFounder />
         <Testimonials />
         <CTASection />
-        <ContactInfo />
       </main>
       <Footer />
     </div>
