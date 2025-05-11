@@ -10,6 +10,24 @@ import {
 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
+// Custom HandCoins icon since it's not in the provided list
+const HandCoins = (props: any) => (
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17" />
+    <path d="m7 21 1.9-1.9c.4-.4 1-.6 1.6-.6h5a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-1" />
+    <circle cx="16" cy="9" r="2.9" />
+    <circle cx="6" cy="5" r="3" />
+  </svg>
+);
+
 const services = [
   {
     id: "forex",
@@ -87,23 +105,5 @@ const Services = () => {
     </section>
   );
 };
-
-// Custom HandCoins icon since it's not in the provided list
-const HandCoins = (props: any) => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    {...props}
-  >
-    <path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17" />
-    <path d="m7 21 1.9-1.9c.4-.4 1-.6 1.6-.6h5a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2h-1" />
-    <circle cx="16" cy="9" r="2.9" />
-    <circle cx="6" cy="5" r="3" />
-  </svg>
-);
 
 export default Services;
