@@ -8,6 +8,8 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import Courses from "./pages/Courses";
+import GetStarted from "./pages/GetStarted";
 
 // Service Pages
 import ForexTrading from "./pages/services/ForexTrading";
@@ -40,6 +42,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/courses" element={<Courses />} />
+          <Route path="/get-started" element={<GetStarted />} />
           <Route path="/forex" element={<ForexTrading />} />
           <Route path="/binary-options" element={<BinaryOptions />} />
           <Route path="/crypto-trading" element={<CryptoTrading />} />

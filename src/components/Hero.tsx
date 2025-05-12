@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -18,11 +19,11 @@ const Hero = () => {
                 Learn how to make money online with our expert-led courses. We offer comprehensive training on various online businesses and income opportunities.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button className="bg-secondary hover:bg-secondary/80 text-primary font-bold text-lg px-8 py-6">
-                  Get Started
+                <Button asChild className="bg-secondary hover:bg-secondary/80 text-primary font-bold text-lg px-8 py-6">
+                  <Link to="/get-started">Get Started</Link>
                 </Button>
-                <Button variant="outline" className="border-secondary text-secondary hover:bg-secondary/10 font-bold text-lg px-8 py-6">
-                  Explore Courses
+                <Button asChild variant="outline" className="border-secondary text-secondary hover:bg-secondary/10 font-bold text-lg px-8 py-6">
+                  <Link to="/courses">Explore Courses</Link>
                 </Button>
               </div>
             </div>
