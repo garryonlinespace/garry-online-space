@@ -16,6 +16,20 @@ import CryptoTrading from "./pages/services/CryptoTrading";
 import BettingSkills from "./pages/services/BettingSkills";
 import AffiliateMarketing from "./pages/services/AffiliateMarketing";
 
+// Payment Pages
+import ForexPayment from "./pages/payments/ForexPayment";
+import BinaryOptionsPayment from "./pages/payments/BinaryOptionsPayment";
+import CryptoTradingPayment from "./pages/payments/CryptoTradingPayment";
+import BettingSkillsPayment from "./pages/payments/BettingSkillsPayment";
+import AffiliateMarketingPayment from "./pages/payments/AffiliateMarketingPayment";
+
+// Confirmation Pages
+import ForexConfirmation from "./pages/confirmations/ForexConfirmation";
+import BinaryOptionsConfirmation from "./pages/confirmations/BinaryOptionsConfirmation";
+import CryptoTradingConfirmation from "./pages/confirmations/CryptoTradingConfirmation";
+import BettingSkillsConfirmation from "./pages/confirmations/BettingSkillsConfirmation";
+import AffiliateMarketingConfirmation from "./pages/confirmations/AffiliateMarketingConfirmation";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -33,6 +47,21 @@ const App = () => (
           <Route path="/affiliate-marketing" element={<AffiliateMarketing />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          
+          {/* Payment Routes */}
+          <Route path="/forex-payment" element={<ForexPayment />} />
+          <Route path="/binary-options-payment" element={<BinaryOptionsPayment />} />
+          <Route path="/crypto-trading-payment" element={<CryptoTradingPayment />} />
+          <Route path="/betting-skills-payment" element={<BettingSkillsPayment />} />
+          <Route path="/affiliate-marketing-payment" element={<AffiliateMarketingPayment />} />
+          
+          {/* Confirmation Routes */}
+          <Route path="/forex-confirmation" element={<ForexConfirmation />} />
+          <Route path="/binary-options-confirmation" element={<BinaryOptionsConfirmation />} />
+          <Route path="/crypto-trading-confirmation" element={<CryptoTradingConfirmation />} />
+          <Route path="/betting-skills-confirmation" element={<BettingSkillsConfirmation />} />
+          <Route path="/affiliate-marketing-confirmation" element={<AffiliateMarketingConfirmation />} />
+          
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

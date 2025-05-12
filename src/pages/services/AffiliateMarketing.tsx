@@ -2,8 +2,15 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const AffiliateMarketing = () => {
+  const navigate = useNavigate();
+
+  const handleEnroll = () => {
+    navigate("/affiliate-marketing-payment");
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -80,7 +87,10 @@ const AffiliateMarketing = () => {
           </div>
           
           <div className="text-center">
-            <Button className="bg-secondary text-primary hover:bg-secondary/80 font-bold px-8 py-6 text-lg">
+            <Button 
+              onClick={handleEnroll}
+              className="bg-secondary text-primary hover:bg-secondary/80 font-bold px-8 py-6 text-lg"
+            >
               Enroll in Affiliate Marketing Course
             </Button>
           </div>
