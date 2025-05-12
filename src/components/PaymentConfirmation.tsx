@@ -1,9 +1,9 @@
 
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Whatsapp } from "lucide-react";
 
 interface PaymentConfirmationProps {
   courseName: string;
@@ -14,6 +14,10 @@ const PaymentConfirmation = ({ courseName }: PaymentConfirmationProps) => {
   
   const handleBackToHome = () => {
     navigate("/");
+  };
+
+  const handleWhatsAppContact = () => {
+    window.open(`https://wa.me/256756530349`, '_blank');
   };
 
   return (
@@ -41,12 +45,22 @@ const PaymentConfirmation = ({ courseName }: PaymentConfirmationProps) => {
             </p>
           </div>
           
-          <Button 
-            onClick={handleBackToHome} 
-            className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3"
-          >
-            Back to Home
-          </Button>
+          <div className="flex flex-col gap-4">
+            <Button 
+              onClick={handleWhatsAppContact}
+              className="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-3 flex items-center justify-center gap-2"
+            >
+              <Whatsapp className="h-5 w-5" />
+              Contact Mentor Drema on WhatsApp
+            </Button>
+            
+            <Button 
+              onClick={handleBackToHome} 
+              className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3"
+            >
+              Back to Home
+            </Button>
+          </div>
         </div>
       </main>
       <Footer />
