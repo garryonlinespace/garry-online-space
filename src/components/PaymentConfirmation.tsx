@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Whatsapp } from "lucide-react";
+import { CheckCircle, MessageCircle } from "lucide-react";
 
 interface PaymentConfirmationProps {
   courseName: string;
@@ -50,7 +50,7 @@ const PaymentConfirmation = ({ courseName }: PaymentConfirmationProps) => {
               onClick={handleWhatsAppContact}
               className="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-3 flex items-center justify-center gap-2"
             >
-              <Whatsapp className="h-5 w-5" />
+              <MessageCircle className="h-5 w-5" />
               Contact Mentor Drema on WhatsApp
             </Button>
             
