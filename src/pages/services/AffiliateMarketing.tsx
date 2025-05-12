@@ -60,11 +60,15 @@ const AffiliateMarketing = () => {
             </div>
             
             <div className="bg-gray-50 p-6 rounded-lg border border-gray-100">
-              <h3 className="text-xl font-bold text-primary mb-4">Course Features</h3>
+              <h3 className="text-xl font-bold text-primary mb-4">Course Details</h3>
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <span className="text-secondary mr-2">✓</span>
-                  <span>Ready-to-use affiliate website templates</span>
+                  <span>Duration: 2 weeks</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-secondary mr-2">✓</span>
+                  <span>Price: UGX 50,000</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-secondary mr-2">✓</span>
@@ -73,10 +77,6 @@ const AffiliateMarketing = () => {
                 <li className="flex items-center">
                   <span className="text-secondary mr-2">✓</span>
                   <span>Conversion optimization workshops</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-secondary mr-2">✓</span>
-                  <span>Traffic generation masterclasses</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-secondary mr-2">✓</span>

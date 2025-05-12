@@ -61,23 +61,23 @@ const ForexTrading = () => {
             </div>
             
             <div className="bg-gray-50 p-6 rounded-lg border border-gray-100">
-              <h3 className="text-xl font-bold text-primary mb-4">Course Features</h3>
+              <h3 className="text-xl font-bold text-primary mb-4">Course Details</h3>
               <ul className="space-y-2">
+                <li className="flex items-center">
+                  <span className="text-secondary mr-2">✓</span>
+                  <span>Duration: 3 months</span>
+                </li>
+                <li className="flex items-center">
+                  <span className="text-secondary mr-2">✓</span>
+                  <span>Price: UGX 300,000</span>
+                </li>
                 <li className="flex items-center">
                   <span className="text-secondary mr-2">✓</span>
                   <span>Live trading sessions with expert traders</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-secondary mr-2">✓</span>
-                  <span>Practice with demo accounts and real-time feedback</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-secondary mr-2">✓</span>
-                  <span>Access to proprietary trading indicators</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="text-secondary mr-2">✓</span>
-                  <span>24/7 support from professional traders</span>
+                  <span>Direct mentorship from professional traders</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-secondary mr-2">✓</span>

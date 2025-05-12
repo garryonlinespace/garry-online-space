@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { 
   Briefcase, 
   ChartBar, 
-  DollarSign, 
   Globe, 
   Users 
 } from "lucide-react";
@@ -37,13 +36,6 @@ const services = [
     link: "/forex"
   },
   {
-    id: "binary",
-    icon: DollarSign,
-    title: "Binary Options",
-    description: "Master binary options trading with our comprehensive training program covering analysis techniques and risk management.",
-    link: "/binary-options"
-  },
-  {
     id: "crypto",
     icon: Globe,
     title: "Crypto Trading",
@@ -53,9 +45,9 @@ const services = [
   {
     id: "betting",
     icon: HandCoins,
-    title: "Betting Skills",
-    description: "Develop professional betting strategies with our data-driven approach to sports analysis and bankroll management.",
-    link: "/betting-skills"
+    title: "Betting Tips and Tickets",
+    description: "Get professional betting tips, winning tickets and develop effective strategies with our data-driven approach to sports analysis.",
+    link: "/betting-tips"
   },
   {
     id: "affiliate",
@@ -98,7 +90,7 @@ const Services = () => {
         
         <div className="mt-12 text-center">
           <Button asChild className="bg-secondary hover:bg-secondary/80 text-primary font-semibold">
-            <Link to="/services">View All Services</Link>
+            <Link to="/courses">View All Services</Link>
           </Button>
         </div>
       </div>

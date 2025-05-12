@@ -4,11 +4,11 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 
-const CryptoTrading = () => {
+const BettingTips = () => {
   const navigate = useNavigate();
 
   const handleEnroll = () => {
-    navigate("/crypto-trading-payment");
+    navigate("/betting-tips-payment");
   };
 
   return (
@@ -17,71 +17,70 @@ const CryptoTrading = () => {
       <main className="flex-1">
         <div className="bg-primary text-white py-16">
           <div className="container mx-auto px-4">
-            <h1 className="text-4xl font-bold mb-4">Cryptocurrency Trading</h1>
+            <h1 className="text-4xl font-bold mb-4">Betting Tips and Tickets</h1>
             <p className="text-lg max-w-2xl">
-              Learn how to navigate the cryptocurrency markets and build a profitable digital asset portfolio
+              Professional betting tips and winning tickets to maximize your sports betting success
             </p>
           </div>
         </div>
         
         <div className="container mx-auto px-4 py-16">
-          <h2 className="text-2xl font-bold text-primary mb-6">About Our Cryptocurrency Trading Course</h2>
+          <h2 className="text-2xl font-bold text-primary mb-6">About Our Betting Service</h2>
           <p className="text-gray-700 mb-6">
-            Our comprehensive Cryptocurrency Trading course equips you with the knowledge and skills 
-            to confidently navigate the volatile crypto markets. From blockchain fundamentals to 
-            advanced trading strategies, you'll learn everything needed to build and manage a successful 
-            digital asset portfolio.
+            Our Betting Tips and Tickets service provides you with professionally analyzed sports betting 
+            opportunities. We combine statistical analysis, sports expertise, and market trends to deliver 
+            high-probability betting tips and curated tickets across multiple sports and leagues.
           </p>
           
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="bg-gray-50 p-6 rounded-lg border border-gray-100">
-              <h3 className="text-xl font-bold text-primary mb-4">What You Will Learn</h3>
+              <h3 className="text-xl font-bold text-primary mb-4">What You Get</h3>
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <span className="text-secondary mr-2">✓</span>
-                  <span>Blockchain and cryptocurrency fundamentals</span>
+                  <span>Weekly betting tickets with high-probability selections</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-secondary mr-2">✓</span>
-                  <span>Technical analysis for crypto markets</span>
+                  <span>Detailed analysis for major sporting events</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-secondary mr-2">✓</span>
-                  <span>Token evaluation and fundamental analysis</span>
+                  <span>Tips for value betting opportunities</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-secondary mr-2">✓</span>
-                  <span>Portfolio management and diversification</span>
+                  <span>Bankroll management guidance</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-secondary mr-2">✓</span>
-                  <span>Security best practices and wallet management</span>
+                  <span>Direct access to expert betting consultants</span>
                 </li>
               </ul>
             </div>
             
             <div className="bg-gray-50 p-6 rounded-lg border border-gray-100">
-              <h3 className="text-xl font-bold text-primary mb-4">Course Details</h3>
+              <h3 className="text-xl font-bold text-primary mb-4">Service Features</h3>
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <span className="text-secondary mr-2">✓</span>
-                  <span>Duration: 3 months</span>
+                  <span>Weekly ticket price: UGX 35,000</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-secondary mr-2">✓</span>
-                  <span>Price: UGX 300,000</span>
+                  <span>Personalized betting consultation</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-secondary mr-2">✓</span>
-                  <span>DeFi protocols and yield farming techniques</span>
+                  <span>Coverage across major sports leagues</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-secondary mr-2">✓</span>
-                  <span>Direct mentorship from crypto specialists</span>
+                  <span>Dedicated WhatsApp support</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-secondary mr-2">✓</span>
-                  <span>Private community for market updates</span>
+                  <span>Tips on avoiding common betting mistakes</span>
                 </li>
               </ul>
             </div>
@@ -92,7 +91,7 @@ const CryptoTrading = () => {
               onClick={handleEnroll}
               className="bg-secondary text-primary hover:bg-secondary/80 font-bold px-8 py-6 text-lg"
             >
-              Enroll in Cryptocurrency Trading Course
+              Get Weekly Betting Tips
             </Button>
           </div>
         </div>
@@ -102,4 +101,4 @@ const CryptoTrading = () => {
   );
 };
 
-export default CryptoTrading;
+export default BettingTips;

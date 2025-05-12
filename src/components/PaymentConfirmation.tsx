@@ -16,8 +16,12 @@ const PaymentConfirmation = ({ courseName }: PaymentConfirmationProps) => {
     navigate("/");
   };
 
-  const handleWhatsAppContact = () => {
-    window.open(`https://wa.me/256756530349`, '_blank');
+  const handleContactMasterminder = () => {
+    window.open(`https://wa.me/256754072448`, '_blank');
+  };
+  
+  const handleContactDrema = () => {
+    window.open(`https://wa.me/256761281222`, '_blank');
   };
 
   return (
@@ -35,28 +39,36 @@ const PaymentConfirmation = ({ courseName }: PaymentConfirmationProps) => {
           
           <div className="bg-gray-50 p-6 rounded-md mb-6 border border-gray-100">
             <p className="text-center text-gray-700 font-medium">
-              For payments contact mentor Drema and start the course.
+              For payments contact one of the mentors and start the course.
             </p>
           </div>
           
           <div className="bg-blue-50 p-4 rounded-md mb-6">
             <p className="text-sm text-blue-700">
-              <span className="font-bold">Note:</span> Please save your payment confirmation to gain access to the course materials.
+              <span className="font-bold">Note:</span> Choose any mentor below to discuss payment details and begin your course immediately.
             </p>
           </div>
           
           <div className="flex flex-col gap-4">
             <Button 
-              onClick={handleWhatsAppContact}
+              onClick={handleContactMasterminder}
               className="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-3 flex items-center justify-center gap-2"
             >
               <MessageCircle className="h-5 w-5" />
-              Contact Mentor Drema on WhatsApp
+              Mentor MasterMinder (+256 754 072448)
+            </Button>
+            
+            <Button 
+              onClick={handleContactDrema}
+              className="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-3 flex items-center justify-center gap-2"
+            >
+              <MessageCircle className="h-5 w-5" />
+              Mentor Drema (+256 761 281222)
             </Button>
             
             <Button 
               onClick={handleBackToHome} 
-              className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3"
+              className="w-full bg-primary hover:bg-primary/90 text-white font-medium py-3 mt-2"
             >
               Back to Home
             </Button>

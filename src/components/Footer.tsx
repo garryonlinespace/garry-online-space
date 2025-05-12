@@ -33,18 +33,13 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/binary-options" className="text-white/70 hover:text-secondary transition-colors">
-                  Binary Options
-                </Link>
-              </li>
-              <li>
                 <Link to="/crypto-trading" className="text-white/70 hover:text-secondary transition-colors">
                   Crypto Trading
                 </Link>
               </li>
               <li>
-                <Link to="/betting-skills" className="text-white/70 hover:text-secondary transition-colors">
-                  Betting Skills
+                <Link to="/betting-tips" className="text-white/70 hover:text-secondary transition-colors">
+                  Betting Tips and Tickets
                 </Link>
               </li>
               <li>
@@ -59,13 +54,13 @@ const Footer = () => {
             <h3 className="font-semibold text-lg border-b border-white/20 pb-2 mb-4">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/about" className="text-white/70 hover:text-secondary transition-colors">
-                  About Us
+                <Link to="/mentor-masterminder" className="text-white/70 hover:text-secondary transition-colors">
+                  Mentor MasterMinder
                 </Link>
               </li>
               <li>
-                <Link to="/testimonials" className="text-white/70 hover:text-secondary transition-colors">
-                  Testimonials
+                <Link to="/mentor-drema" className="text-white/70 hover:text-secondary transition-colors">
+                  Mentor Drema
                 </Link>
               </li>
               <li>
@@ -79,8 +74,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/faq" className="text-white/70 hover:text-secondary transition-colors">
-                  FAQ
+                <Link to="/get-started" className="text-white/70 hover:text-secondary transition-colors">
+                  Get Started
                 </Link>
               </li>
             </ul>
@@ -91,14 +86,14 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex">
                 <span className="text-white/70">Address:</span>
-                <span className="ml-2">Kisaasi, Kampala, Uganda</span>
+                <span className="ml-2">Kampala, Uganda</span>
               </li>
               <li className="flex">
-                <span className="text-white/70">Phone:</span>
-                <span className="ml-2">+256 756 530349</span>
+                <span className="text-white/70">MasterMinder:</span>
+                <span className="ml-2">+256 754 072448</span>
               </li>
               <li className="flex">
-                <span className="text-white/70">Alternative:</span>
+                <span className="text-white/70">Drema:</span>
                 <span className="ml-2">+256 761 281222</span>
               </li>
               <li className="flex flex-wrap">

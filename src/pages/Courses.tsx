@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { 
   ChartBar, 
-  DollarSign, 
   Globe, 
   Users 
 } from "lucide-react";
@@ -38,13 +37,6 @@ const courses = [
     link: "/forex"
   },
   {
-    id: "binary",
-    icon: DollarSign,
-    title: "Binary Options",
-    description: "Master binary options trading with our comprehensive training program covering analysis techniques and risk management. Duration: 1 month",
-    link: "/binary-options"
-  },
-  {
     id: "crypto",
     icon: Globe,
     title: "Crypto Trading",
@@ -54,15 +46,15 @@ const courses = [
   {
     id: "betting",
     icon: HandCoins,
-    title: "Betting Skills",
-    description: "Develop professional betting strategies with our data-driven approach to sports analysis and bankroll management. Duration: 1 month",
-    link: "/betting-skills"
+    title: "Betting Tips and Tickets",
+    description: "Get professional betting tips, winning tickets, and learn effective betting strategies with our data-driven approach. Tickets: UGX 35,000/week",
+    link: "/betting-tips"
   },
   {
     id: "affiliate",
     icon: Users,
     title: "Affiliate Marketing",
-    description: "Build profitable affiliate marketing businesses by learning effective promotion strategies and passive income techniques. Duration: 1 month",
+    description: "Build profitable affiliate marketing businesses by learning effective promotion strategies and passive income techniques. Duration: 2 weeks",
     link: "/affiliate-marketing"
   }
 ];

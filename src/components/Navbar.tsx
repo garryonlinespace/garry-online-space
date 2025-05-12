@@ -35,25 +35,22 @@ const Navbar = () => {
               <Link to="/forex" className="block px-4 py-2 text-primary hover:bg-gray-100">
                 Forex Trading
               </Link>
-              <Link to="/binary-options" className="block px-4 py-2 text-primary hover:bg-gray-100">
-                Binary Options
-              </Link>
               <Link to="/crypto-trading" className="block px-4 py-2 text-primary hover:bg-gray-100">
                 Crypto Trading
               </Link>
-              <Link to="/betting-skills" className="block px-4 py-2 text-primary hover:bg-gray-100">
-                Betting Skills
+              <Link to="/betting-tips" className="block px-4 py-2 text-primary hover:bg-gray-100">
+                Betting Tips and Tickets
               </Link>
               <Link to="/affiliate-marketing" className="block px-4 py-2 text-primary hover:bg-gray-100">
                 Affiliate Marketing
               </Link>
             </div>
           </div>
-          <Link to="/about" className="text-white hover:text-secondary transition-colors">
-            About
+          <Link to="/mentor-masterminder" className="text-white hover:text-secondary transition-colors">
+            Mentor MasterMinder
           </Link>
-          <Link to="/testimonials" className="text-white hover:text-secondary transition-colors">
-            Testimonials
+          <Link to="/mentor-drema" className="text-white hover:text-secondary transition-colors">
+            Mentor Drema
           </Link>
           <Link to="/contact" className="text-white hover:text-secondary transition-colors">
             Contact
@@ -84,25 +81,22 @@ const Navbar = () => {
                 <Link to="/forex" className="text-white hover:text-secondary" onClick={() => setIsOpen(false)}>
                   Forex Trading
                 </Link>
-                <Link to="/binary-options" className="text-white hover:text-secondary" onClick={() => setIsOpen(false)}>
-                  Binary Options
-                </Link>
                 <Link to="/crypto-trading" className="text-white hover:text-secondary" onClick={() => setIsOpen(false)}>
                   Crypto Trading
                 </Link>
-                <Link to="/betting-skills" className="text-white hover:text-secondary" onClick={() => setIsOpen(false)}>
-                  Betting Skills
+                <Link to="/betting-tips" className="text-white hover:text-secondary" onClick={() => setIsOpen(false)}>
+                  Betting Tips and Tickets
                 </Link>
                 <Link to="/affiliate-marketing" className="text-white hover:text-secondary" onClick={() => setIsOpen(false)}>
                   Affiliate Marketing
                 </Link>
               </div>
             </div>
-            <Link to="/about" className="text-white hover:text-secondary px-4 py-2" onClick={() => setIsOpen(false)}>
-              About
+            <Link to="/mentor-masterminder" className="text-white hover:text-secondary px-4 py-2" onClick={() => setIsOpen(false)}>
+              Mentor MasterMinder
             </Link>
-            <Link to="/testimonials" className="text-white hover:text-secondary px-4 py-2" onClick={() => setIsOpen(false)}>
-              Testimonials
+            <Link to="/mentor-drema" className="text-white hover:text-secondary px-4 py-2" onClick={() => setIsOpen(false)}>
+              Mentor Drema
             </Link>
             <Link to="/contact" className="text-white hover:text-secondary px-4 py-2" onClick={() => setIsOpen(false)}>
               Contact
