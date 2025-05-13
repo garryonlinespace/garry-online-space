@@ -24,7 +24,7 @@ const GetStarted = () => {
             <div className="mb-12 max-w-3xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-primary mb-6">Choose Your Path to Success</h2>
               <p className="text-lg text-gray-700 mb-8">
-                All five of our premium courses are currently available for enrollment. Each course is designed to provide you with practical knowledge and skills that can transform your financial future within a short period of time.
+                All four of our premium courses are currently available for enrollment. Each course is designed to provide you with practical knowledge and skills that can transform your financial future within a short period of time.
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-10">
                 <div className="flex items-center gap-2 text-primary font-medium px-4 py-2 bg-primary/5 rounded-full">
@@ -54,17 +54,6 @@ const GetStarted = () => {
                 
                 <div className="p-4 bg-white rounded-md border-l-4 border-secondary flex justify-between items-center">
                   <div>
-                    <h4 className="font-bold text-lg">Binary Options</h4>
-                    <p className="text-gray-600">Learn timing strategies and risk management techniques</p>
-                  </div>
-                  <div className="flex items-center gap-2 text-primary font-medium">
-                    <Clock className="h-5 w-5" />
-                    <span>1 Month</span>
-                  </div>
-                </div>
-                
-                <div className="p-4 bg-white rounded-md border-l-4 border-secondary flex justify-between items-center">
-                  <div>
                     <h4 className="font-bold text-lg">Crypto Trading</h4>
                     <p className="text-gray-600">Navigate cryptocurrency markets and build a digital asset portfolio</p>
                   </div>
@@ -76,12 +65,12 @@ const GetStarted = () => {
                 
                 <div className="p-4 bg-white rounded-md border-l-4 border-secondary flex justify-between items-center">
                   <div>
-                    <h4 className="font-bold text-lg">Betting Skills</h4>
-                    <p className="text-gray-600">Develop analytical approaches to sports betting</p>
+                    <h4 className="font-bold text-lg">Betting Tips and Tickets</h4>
+                    <p className="text-gray-600">Weekly professional betting tips and winning strategies</p>
                   </div>
                   <div className="flex items-center gap-2 text-primary font-medium">
                     <Clock className="h-5 w-5" />
-                    <span>1 Month</span>
+                    <span>Weekly Tickets</span>
                   </div>
                 </div>
                 
@@ -92,7 +81,7 @@ const GetStarted = () => {
                   </div>
                   <div className="flex items-center gap-2 text-primary font-medium">
                     <Clock className="h-5 w-5" />
-                    <span>1 Month</span>
+                    <span>2 Weeks</span>
                   </div>
                 </div>
               </div>

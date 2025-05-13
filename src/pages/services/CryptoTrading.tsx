@@ -69,7 +69,7 @@ const CryptoTrading = () => {
                 </li>
                 <li className="flex items-center">
                   <span className="text-secondary mr-2">✓</span>
-                  <span>Price: UGX 300,000</span>
+                  <span>Price: USD 100</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-secondary mr-2">✓</span>

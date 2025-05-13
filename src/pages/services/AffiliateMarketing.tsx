@@ -68,7 +68,7 @@ const AffiliateMarketing = () => {
                 </li>
                 <li className="flex items-center">
                   <span className="text-secondary mr-2">✓</span>
-                  <span>Price: UGX 50,000</span>
+                  <span>Price: USD 15</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-secondary mr-2">✓</span>

@@ -92,14 +92,14 @@ const Testimonials = () => {
           <div className="flex justify-center mt-8">
             <Button 
               variant="outline" 
-              className="mr-2 border-white/20 text-white hover:bg-white/10"
+              className="mr-2 border-white text-white bg-white/10 hover:bg-white/20"
               onClick={prevSlide}
             >
               Previous
             </Button>
             <Button 
               variant="outline"
-              className="border-white/20 text-white hover:bg-white/10"
+              className="border-white text-white bg-white/10 hover:bg-white/20"
               onClick={nextSlide}
             >
               Next

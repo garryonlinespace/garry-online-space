@@ -5,7 +5,8 @@ const BettingTipsPayment = () => {
   return (
     <PaymentPage 
       courseName="Betting Tips and Tickets" 
-      amount={35000} 
+      amount={10} 
+      currency="USD" 
       redirectPath="/betting-tips-confirmation" 
     />
   );

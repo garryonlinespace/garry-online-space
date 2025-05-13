@@ -64,7 +64,7 @@ const BettingTips = () => {
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <span className="text-secondary mr-2">✓</span>
-                  <span>Weekly ticket price: UGX 35,000</span>
+                  <span>Weekly ticket price: USD 10</span>
                 </li>
                 <li className="flex items-center">
                   <span className="text-secondary mr-2">✓</span>

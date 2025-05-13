@@ -47,7 +47,7 @@ const courses = [
     id: "betting",
     icon: HandCoins,
     title: "Betting Tips and Tickets",
-    description: "Get professional betting tips, winning tickets, and learn effective betting strategies with our data-driven approach. Tickets: UGX 35,000/week",
+    description: "Get professional betting tips, winning tickets, and learn effective betting strategies with our data-driven approach. Tickets: USD 10/week",
     link: "/betting-tips"
   },
   {
@@ -82,7 +82,7 @@ const Courses = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
               {courses.map((course) => (
                 <Card key={course.id} className="border-l-4 border-secondary hover:shadow-lg transition-shadow bg-white overflow-hidden">
                   <CardHeader className="pb-4">

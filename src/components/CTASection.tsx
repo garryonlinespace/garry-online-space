@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const CTASection = () => {
   return (
@@ -13,11 +14,11 @@ const CTASection = () => {
           "Online is the future" - Access expert-led training programs designed to help you succeed in various digital income opportunities.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
-          <Button className="bg-secondary hover:bg-secondary/80 text-primary font-bold text-lg px-8 py-6">
-            Enroll Now
+          <Button asChild className="bg-secondary hover:bg-secondary/80 text-primary font-bold text-lg px-8 py-6">
+            <Link to="/get-started">Enroll Now</Link>
           </Button>
-          <Button variant="outline" className="border-white text-white hover:bg-white/10 font-bold text-lg px-8 py-6">
-            View All Courses
+          <Button asChild variant="outline" className="border-white bg-white/10 text-white hover:bg-white/20 font-bold text-lg px-8 py-6">
+            <Link to="/courses">View All Courses</Link>
           </Button>
         </div>
       </div>

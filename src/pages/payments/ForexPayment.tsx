@@ -5,7 +5,8 @@ const ForexPayment = () => {
   return (
     <PaymentPage 
       courseName="Forex Trading Course" 
-      amount={300000} 
+      amount={100} 
+      currency="USD" 
       redirectPath="/forex-confirmation" 
     />
   );

@@ -5,7 +5,8 @@ const CryptoTradingPayment = () => {
   return (
     <PaymentPage 
       courseName="Cryptocurrency Trading Course" 
-      amount={300000} 
+      amount={100} 
+      currency="USD" 
       redirectPath="/crypto-trading-confirmation" 
     />
   );

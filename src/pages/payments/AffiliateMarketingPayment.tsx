@@ -5,7 +5,8 @@ const AffiliateMarketingPayment = () => {
   return (
     <PaymentPage 
       courseName="Affiliate Marketing Course" 
-      amount={50000} 
+      amount={15} 
+      currency="USD" 
       redirectPath="/affiliate-marketing-confirmation" 
     />
   );
