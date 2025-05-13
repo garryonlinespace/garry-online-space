@@ -2,9 +2,8 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { Phone, Instagram, TikTok } from "lucide-react";
+import { Phone, Instagram, MessageSquare } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Link } from "react-router-dom";
 
 const MentorMasterminder = () => {
   const handleContactWhatsApp = () => {
@@ -38,7 +37,7 @@ const MentorMasterminder = () => {
               <div className="md:w-1/2">
                 <Avatar className="w-full aspect-square h-auto rounded-full border-4 border-primary">
                   <AvatarImage 
-                    src="/lovable-uploads/93335498-a668-464f-950d-8ccf1d8dfc7f.png"
+                    src="/lovable-uploads/9d7a1583-4128-4bc9-a415-3aaf7158fe96.png"
                     alt="Mentor MasterMinder" 
                     className="object-cover"
                   />
@@ -100,7 +99,11 @@ const MentorMasterminder = () => {
                         onClick={handleOpenTikTok}
                         className="bg-black hover:bg-gray-800 text-white flex items-center gap-2"
                       >
-                        <TikTok className="h-5 w-5" />
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5">
+                          <path d="M9 12a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"></path>
+                          <path d="M10 8V5l5 2v5"></path>
+                          <path d="M22 12c0 5.5-4.5 10-10 10S2 17.5 2 12 6.5 2 12 2s10 4.5 10 10z"></path>
+                        </svg>
                         TikTok
                       </Button>
 
@@ -121,7 +124,7 @@ const MentorMasterminder = () => {
                     onClick={handleContactWhatsApp}
                     className="bg-green-500 hover:bg-green-600 text-white flex items-center gap-2"
                   >
-                    <Phone className="h-5 w-5" />
+                    <MessageSquare className="h-5 w-5" />
                     Contact on WhatsApp (+256 754 072448)
                   </Button>
                 </div>
