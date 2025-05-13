@@ -29,7 +29,7 @@ const MentorDrema = () => {
               <div className="md:w-1/2">
                 <Avatar className="w-full aspect-square h-auto rounded-full border-4 border-primary">
                   <AvatarImage 
-                    src="/lovable-uploads/3dc801c6-c603-4756-9cdc-a14a0ff7152f.png"
+                    src="/lovable-uploads/d94f86ad-d350-4130-8c2b-6f04f876e8f6.png"
                     alt="Mentor Drema" 
                     className="object-cover"
                   />
