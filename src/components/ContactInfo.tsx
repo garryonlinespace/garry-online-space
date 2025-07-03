@@ -31,7 +31,7 @@ const ContactInfo = () => {
                   <div>
                     <p className="font-medium text-gray-800">Phone:</p>
                     <p className="text-gray-600">Mentor MasterMinder: +256 754 072448</p>
-                    <p className="text-gray-600">Mentor Drema: +256 761 281222</p>
+                    <p className="text-gray-600">Mentor Isiah: +256 761 281222</p>
                   </div>
                 </div>
                 

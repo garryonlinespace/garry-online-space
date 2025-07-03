@@ -63,7 +63,7 @@ const PaymentConfirmation = ({ courseName }: PaymentConfirmationProps) => {
               className="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-3 flex items-center justify-center gap-2"
             >
               <MessageCircle className="h-5 w-5" />
-              Mentor Drema (+256 761 281222)
+              Mentor Isiah (+256 761 281222)
             </Button>
             
             <Button 

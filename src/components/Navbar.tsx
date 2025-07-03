@@ -50,7 +50,7 @@ const Navbar = () => {
             Mentor MasterMinder
           </Link>
           <Link to="/mentor-drema" className="text-white hover:text-secondary transition-colors">
-            Mentor Drema
+            Mentor Isiah
           </Link>
           <Link to="/contact" className="text-white hover:text-secondary transition-colors">
             Contact
@@ -96,7 +96,7 @@ const Navbar = () => {
               Mentor MasterMinder
             </Link>
             <Link to="/mentor-drema" className="text-white hover:text-secondary px-4 py-2" onClick={() => setIsOpen(false)}>
-              Mentor Drema
+              Mentor Isiah
             </Link>
             <Link to="/contact" className="text-white hover:text-secondary px-4 py-2" onClick={() => setIsOpen(false)}>
               Contact

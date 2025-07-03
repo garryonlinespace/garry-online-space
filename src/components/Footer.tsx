@@ -60,7 +60,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/mentor-drema" className="text-white/70 hover:text-secondary transition-colors">
-                  Mentor Drema
+                  Mentor Isiah
                 </Link>
               </li>
               <li>
@@ -93,7 +93,7 @@ const Footer = () => {
                 <span className="ml-2">+256 754 072448</span>
               </li>
               <li className="flex">
-                <span className="text-white/70">Drema:</span>
+                <span className="text-white/70">Isiah:</span>
                 <span className="ml-2">+256 761 281222</span>
               </li>
               <li className="flex flex-wrap">

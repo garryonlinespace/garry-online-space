@@ -16,7 +16,7 @@ const MentorDrema = () => {
       <main className="flex-1">
         <div className="bg-primary text-white py-16">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl font-bold mb-4">Mentor Drema</h1>
+            <h1 className="text-4xl font-bold mb-4">Mentor Isiah</h1>
             <p className="text-lg max-w-2xl mx-auto">
               Expert in Betting strategies, Tips, and Affiliate Marketing
             </p>
@@ -30,15 +30,15 @@ const MentorDrema = () => {
                 <Avatar className="w-full aspect-square h-auto rounded-full border-4 border-primary">
                   <AvatarImage 
                     src="/lovable-uploads/d94f86ad-d350-4130-8c2b-6f04f876e8f6.png"
-                    alt="Mentor Drema" 
+                    alt="Mentor Isiah" 
                     className="object-cover"
                   />
-                  <AvatarFallback className="text-5xl text-primary font-bold">MD</AvatarFallback>
+                  <AvatarFallback className="text-5xl text-primary font-bold">MI</AvatarFallback>
                 </Avatar>
               </div>
               
               <div className="md:w-1/2">
-                <h2 className="text-3xl font-bold text-primary mb-6">About Mentor Drema</h2>
+                <h2 className="text-3xl font-bold text-primary mb-6">About Mentor Isiah</h2>
                 <div className="space-y-4 text-gray-700">
                   <p>
                     I joined the online space in 2022. I am the founder of "Garrison Enterprises (Uganda) Limited". I am a programmer and a software engineer. 
@@ -85,7 +85,7 @@ const MentorDrema = () => {
                     className="bg-green-500 hover:bg-green-600 text-white flex items-center gap-2"
                   >
                     <MessageSquare className="h-5 w-5" />
-                    Contact on WhatsApp (+256 761 281222)
+                    Contact Mentor Isiah on WhatsApp (+256 761 281222)
                   </Button>
                 </div>
               </div>
