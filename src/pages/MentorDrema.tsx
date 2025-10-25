@@ -14,20 +14,20 @@ const MentorDrema = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1">
-        <div className="bg-primary text-white py-16">
+        <div className="bg-primary text-white py-12 md:py-16">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl font-bold mb-4">Mentor Isiah</h1>
-            <p className="text-lg max-w-2xl mx-auto">
+            <h1 className="text-3xl md:text-4xl font-bold mb-4">Mentor Isiah</h1>
+            <p className="text-base md:text-lg max-w-2xl mx-auto px-2">
               Expert in Betting strategies, Tips, and Affiliate Marketing
             </p>
           </div>
         </div>
         
-        <section className="py-16">
+        <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
-            <div className="flex flex-col md:flex-row gap-12 items-center">
-              <div className="md:w-1/2">
-                <Avatar className="w-full aspect-square h-auto rounded-full border-4 border-primary">
+            <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+              <div className="w-full md:w-1/2">
+                <Avatar className="w-full max-w-sm mx-auto aspect-square h-auto rounded-full border-4 border-primary">
                   <AvatarImage 
                     src="/lovable-uploads/d94f86ad-d350-4130-8c2b-6f04f876e8f6.png"
                     alt="Mentor Isiah" 
@@ -37,9 +37,9 @@ const MentorDrema = () => {
                 </Avatar>
               </div>
               
-              <div className="md:w-1/2">
-                <h2 className="text-3xl font-bold text-primary mb-6">About Mentor Isiah</h2>
-                <div className="space-y-4 text-gray-700">
+              <div className="w-full md:w-1/2">
+                <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4 md:mb-6">About Mentor Isiah</h2>
+                <div className="space-y-3 md:space-y-4 text-sm md:text-base text-gray-700">
                   <p>
                     I joined the online space in 2022. I am the founder of "Garrison Enterprises (Uganda) Limited". I am a programmer and a software engineer. 
                   </p>
@@ -56,20 +56,20 @@ const MentorDrema = () => {
                     We met online as traders but by then, he was abit more experienced than me, but after sometime, he taught me skills in Forex Trading and I started booming in Forex trading and the Online Space at large.
                   </p>
 
-                  <div className="mt-8">
-                    <h3 className="font-bold text-xl mb-2">Roles:</h3>
-                    <p>
+                  <div className="mt-6 md:mt-8">
+                    <h3 className="font-bold text-lg md:text-xl mb-2">Roles:</h3>
+                    <p className="text-sm md:text-base">
                       I give out mentorship in Forex Trading, psychological skills in online businesses.
                     </p>
-                    <p>
+                    <p className="text-sm md:text-base">
                       I also offer money risk management skills in the online businesses.
                       Together with Mentor MasterMinder, we aim at giving you the best service.
                     </p>
                   </div>
 
-                  <div className="mt-8 space-y-3">
-                    <h3 className="font-bold text-xl">Specialties:</h3>
-                    <ul className="list-disc pl-5 space-y-2">
+                  <div className="mt-6 md:mt-8 space-y-3">
+                    <h3 className="font-bold text-lg md:text-xl">Specialties:</h3>
+                    <ul className="list-disc pl-4 md:pl-5 space-y-2 text-sm md:text-base">
                       <li>Professional betting tips and strategies</li>
                       <li>Weekly winning tickets</li>
                       <li>Affiliate marketing campaign development</li>
@@ -79,13 +79,14 @@ const MentorDrema = () => {
                   </div>
                 </div>
                 
-                <div className="mt-8">
+                <div className="mt-6 md:mt-8">
+                  <h3 className="font-bold text-lg md:text-xl mb-4">Contact Mentor Isiah:</h3>
                   <Button 
                     onClick={handleContactWhatsApp}
-                    className="bg-green-500 hover:bg-green-600 text-white flex items-center gap-2"
+                    className="bg-green-500 hover:bg-green-600 text-white flex items-center gap-2 w-full md:w-auto text-sm md:text-base"
                   >
                     <MessageSquare className="h-5 w-5" />
-                    Contact Mentor Isiah on WhatsApp (+256 761 281222)
+                    Contact on WhatsApp (+256 761 281222)
                   </Button>
                 </div>
               </div>
