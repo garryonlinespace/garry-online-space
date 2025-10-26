@@ -61,7 +61,7 @@ const Navbar = () => {
         <Button 
           variant="ghost" 
           size="icon" 
-          className="md:hidden text-white"
+          className="md:hidden text-white hover:bg-transparent active:bg-transparent hover:text-white"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X /> : <Menu />}

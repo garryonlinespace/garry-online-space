@@ -1,58 +1,69 @@
-
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const testimonials = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    role: "Forex Trader",
-    image: "/placeholder.svg",
-    content: "The forex trading course at Garry Online Space completely transformed my understanding of the markets. Within 3 months of completing the course, I was consistently making profitable trades.",
+    name: "James Mukasa",
+    role: "Forex Trading Expert",
+    content: "Working with Mentor MasterMinder completely transformed my forex trading journey. His deep understanding of market analysis and risk management strategies helped me achieve consistent profitability. I went from losing trades to making $5,000+ monthly within just 6 months.",
     rating: 5
   },
   {
     id: 2,
-    name: "Michael Thompson",
-    role: "Crypto Investor",
-    image: "/placeholder.svg",
-    content: "Mentor Drema's crypto trading program gave me the confidence to build a diversified portfolio. The strategies I learned helped me navigate market volatility and maximize returns.",
+    name: "Grace Namwanje",
+    role: "Crypto Investor & Trader",
+    content: "Mentor Isiah's approach to cryptocurrency trading is phenomenal. His insights on blockchain technology, market trends, and portfolio diversification strategies gave me the confidence to navigate the volatile crypto markets. I've grown my portfolio by 300% in one year!",
     rating: 5
   },
   {
     id: 3,
-    name: "David Ochieng",
-    role: "Affiliate Marketer",
-    image: "/placeholder.svg",
-    content: "I was struggling with affiliate marketing before joining Garry Online Space. The step-by-step guidance helped me build a sustainable income stream that now generates $3000 monthly.",
+    name: "David Okello",
+    role: "Professional Sports Bettor",
+    content: "Mentor MasterMinder's betting strategies and statistical analysis techniques revolutionized how I approach sports betting. His mentorship taught me discipline, bankroll management, and how to identify value bets. Now I consistently earn $2,000+ monthly from betting.",
     rating: 5
   },
   {
     id: 4,
-    name: "Rebecca Namukose",
+    name: "Sarah Nabirye",
+    role: "Affiliate Marketing Specialist",
+    content: "Mentor Isiah showed me how to build a sustainable affiliate marketing business from scratch. His training on content creation, SEO, and conversion optimization helped me scale from $0 to $4,500 in monthly passive income within 8 months. Absolutely life-changing!",
+    rating: 5
+  },
+  {
+    id: 5,
+    name: "Emmanuel Kato",
     role: "Binary Options Trader",
-    image: "/placeholder.svg",
-    content: "The binary options course exceeded my expectations. The risk management strategies alone were worth the investment. Now I trade with confidence and consistent results.",
-    rating: 4
+    content: "Mentor MasterMinder's binary options strategies are incredibly effective. He taught me precise entry and exit points, risk management, and how to read market sentiment. His mentorship took me from complete beginner to profitable trader earning $3,000+ monthly.",
+    rating: 5
+  },
+  {
+    id: 6,
+    name: "Patricia Nankya",
+    role: "Full-Time Online Entrepreneur",
+    content: "Both mentors have been instrumental in my success. Mentor Isiah's crypto guidance and Mentor MasterMinder's forex expertise gave me multiple income streams. I now run a successful online business generating over $8,000 monthly. Forever grateful for their mentorship!",
+    rating: 5
   },
 ];
 
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => 
+        prevIndex + 3 >= testimonials.length ? 0 : prevIndex + 3
+      );
+    }, 5000); // Auto-slide every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   const visibleTestimonials = testimonials.slice(activeIndex, activeIndex + 3);
-  
-  const nextSlide = () => {
-    setActiveIndex((prevIndex) => 
-      prevIndex + 3 >= testimonials.length ? 0 : prevIndex + 3
-    );
-  };
-  
-  const prevSlide = () => {
-    setActiveIndex((prevIndex) => 
-      prevIndex - 3 < 0 ? Math.max(0, testimonials.length - 3) : prevIndex - 3
-    );
-  };
+  // If we don't have enough testimonials at the end, wrap around
+  if (visibleTestimonials.length < 3) {
+    visibleTestimonials.push(...testimonials.slice(0, 3 - visibleTestimonials.length));
+  }
 
   return (
     <section className="py-16 bg-primary text-white">
@@ -60,57 +71,50 @@ const Testimonials = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Success Stories</h2>
           <p className="text-lg max-w-2xl mx-auto text-white/80">
-            Hear from our students who have successfully applied our training to build profitable online businesses
+            Real testimonials from students who transformed their lives through our mentorship programs
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {visibleTestimonials.map((testimonial) => (
-            <Card key={testimonial.id} className="bg-white/10 backdrop-blur-sm border-0 overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 transition-all duration-500">
+          {visibleTestimonials.map((testimonial, index) => (
+            <Card 
+              key={`${testimonial.id}-${index}`} 
+              className="bg-white/10 backdrop-blur-sm border-0 overflow-hidden transform transition-all duration-500 hover:scale-105"
+            >
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-primary font-bold">
+                  <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-primary font-bold text-xl">
                     {testimonial.name.charAt(0)}
                   </div>
                   <div className="ml-4">
-                    <h4 className="font-semibold">{testimonial.name}</h4>
+                    <h4 className="font-semibold text-lg">{testimonial.name}</h4>
                     <p className="text-white/70 text-sm">{testimonial.role}</p>
                   </div>
                 </div>
-                <div className="mb-4">
+                <div className="mb-4 flex gap-1">
                   {Array(5).fill(0).map((_, i) => (
-                    <span key={i} className={`text-${i < testimonial.rating ? 'secondary' : 'white/30'}`}>★</span>
+                    <span key={i} className="text-secondary text-lg">★</span>
                   ))}
                 </div>
-                <p className="text-white/80">{testimonial.content}</p>
+                <p className="text-white/80 leading-relaxed">{testimonial.content}</p>
               </CardContent>
             </Card>
           ))}
         </div>
         
-        {testimonials.length > 3 && (
-          <div className="flex justify-center mt-8">
-            <Button 
-              variant="outline" 
-              className="mr-2 border-white text-white bg-white/10 hover:bg-white/20"
-              onClick={prevSlide}
-            >
-              Previous
-            </Button>
-            <Button 
-              variant="outline"
-              className="border-white text-white bg-white/10 hover:bg-white/20"
-              onClick={nextSlide}
-            >
-              Next
-            </Button>
-          </div>
-        )}
-        
-        <div className="mt-12 text-center">
-          <Button className="bg-secondary hover:bg-secondary/80 text-primary font-semibold">
-            Read More Testimonials
-          </Button>
+        <div className="flex justify-center mt-8 gap-2">
+          {Array(Math.ceil(testimonials.length / 3)).fill(0).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setActiveIndex(i * 3)}
+              className={`w-3 h-3 rounded-full transition-all ${
+                Math.floor(activeIndex / 3) === i 
+                  ? 'bg-secondary w-8' 
+                  : 'bg-white/30 hover:bg-white/50'
+              }`}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
         </div>
       </div>
     </section>

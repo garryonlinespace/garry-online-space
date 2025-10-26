@@ -12,7 +12,7 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <MarqueeTicker />
-      <main>
+      <main className="pt-[40px]">
         <Hero />
         <Services />
         <Testimonials />
