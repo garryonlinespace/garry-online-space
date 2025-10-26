@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 
 // ⚠️ ADD YOUR FINNHUB API KEY HERE ⚠️
-const FINNHUB_API_KEY = "YOUR_API_KEY_HERE";
+const FINNHUB_API_KEY = "d3ugcl9r01qil4apur8gd3ugcl9r01qil4apur90";
 
 interface ForexPrice {
   pair: string;
@@ -33,11 +33,6 @@ const MarqueeTicker = () => {
 
   useEffect(() => {
     const connectWebSocket = () => {
-      if (FINNHUB_API_KEY === "YOUR_API_KEY_HERE") {
-        console.warn("⚠️ Please add your Finnhub API key in MarqueeTicker.tsx");
-        return;
-      }
-
       const ws = new WebSocket(`wss://ws.finnhub.io?token=${FINNHUB_API_KEY}`);
       wsRef.current = ws;
 
