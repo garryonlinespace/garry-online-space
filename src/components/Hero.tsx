@@ -51,7 +51,7 @@ const Hero = () => {
 
   return (
     <section className="relative">
-      <div className="relative py-12 md:py-16 lg:py-20 overflow-hidden bg-[#1a1a2e]">
+      <div className="relative pb-12 md:pb-16 lg:pb-20 overflow-hidden bg-[#1a1a2e]">
         {/* Background Image */}
         <div 
           className="absolute inset-0 opacity-60"
