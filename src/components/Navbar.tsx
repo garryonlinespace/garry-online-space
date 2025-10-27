@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import MarqueeTicker from "@/components/MarqueeTicker";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -106,7 +105,6 @@ const Navbar = () => {
         </div>
       )}
       </div>
-      <MarqueeTicker />
     </header>
   );
 };
