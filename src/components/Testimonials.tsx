@@ -33,8 +33,8 @@ const testimonials = [
   {
     id: 5,
     name: "Emmanuel Kato",
-    role: "Binary Options Trader",
-    content: "Mentor MasterMinder's binary options strategies are incredibly effective. He taught me precise entry and exit points, risk management, and how to read market sentiment. His mentorship took me from complete beginner to profitable trader earning $3,000+ monthly.",
+    role: "Professional Sports Betting Strategist",
+    content: "Mentor Isiah's betting tips and strategies completely transformed my approach to sports betting. His analytical methods, risk management techniques, and insider knowledge helped me turn betting into a consistent income stream. I now earn $3,000+ monthly following his expert guidance.",
     rating: 5
   },
   {
@@ -75,31 +75,32 @@ const Testimonials = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 transition-all duration-500">
-          {visibleTestimonials.map((testimonial, index) => (
-            <Card 
-              key={`${testimonial.id}-${index}`} 
-              className="bg-white/10 backdrop-blur-sm border-0 overflow-hidden transform transition-all duration-500 hover:scale-105"
-            >
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-primary font-bold text-xl">
-                    {testimonial.name.charAt(0)}
-                  </div>
-                  <div className="ml-4">
-                    <h4 className="font-semibold text-lg">{testimonial.name}</h4>
-                    <p className="text-white/70 text-sm">{testimonial.role}</p>
-                  </div>
-                </div>
-                <div className="mb-4 flex gap-1">
-                  {Array(5).fill(0).map((_, i) => (
-                    <span key={i} className="text-secondary text-lg">★</span>
-                  ))}
-                </div>
-                <p className="text-white/80 leading-relaxed">{testimonial.content}</p>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="relative overflow-hidden">
+          <div className="flex gap-6 transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${(activeIndex / 3) * 100}%)` }}>
+            {testimonials.map((testimonial) => (
+              <div key={testimonial.id} className="flex-shrink-0 w-full md:w-1/3 px-3">
+                <Card className="bg-white/10 backdrop-blur-sm border-0 overflow-hidden transform transition-all duration-500 hover:scale-105 h-full">
+                  <CardContent className="p-6">
+                    <div className="flex items-center mb-4">
+                      <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-primary font-bold text-xl">
+                        {testimonial.name.charAt(0)}
+                      </div>
+                      <div className="ml-4">
+                        <h4 className="font-semibold text-lg">{testimonial.name}</h4>
+                        <p className="text-white/70 text-sm">{testimonial.role}</p>
+                      </div>
+                    </div>
+                    <div className="mb-4 flex gap-1">
+                      {Array(5).fill(0).map((_, i) => (
+                        <span key={i} className="text-secondary text-lg">★</span>
+                      ))}
+                    </div>
+                    <p className="text-white/80 leading-relaxed">{testimonial.content}</p>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
+          </div>
         </div>
         
         <div className="flex justify-center mt-8 gap-2">

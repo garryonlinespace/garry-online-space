@@ -126,7 +126,7 @@ const MarqueeTicker = () => {
   const duplicatedPrices = [...prices, ...prices];
 
   return (
-    <div className="bg-[#1a1a1a] text-white py-2 overflow-hidden border-b border-gray-800 relative fixed top-[72px] left-0 right-0 z-40">
+    <div className="bg-[#1a1a1a] text-white py-2 overflow-hidden border-b border-gray-800 relative">
       {/* Connection Status Indicator */}
       <div className="absolute top-1 right-2 z-10">
         <div className={`w-2 h-2 rounded-full ${isConnected ? 'bg-green-500 animate-pulse' : 'bg-red-500'}`} 
