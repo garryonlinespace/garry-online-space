@@ -10,19 +10,20 @@ interface ForexPrice {
   change: number;
   changePercent: number;
   previousRate: number;
+  baselineRate: number;
   isPositive: boolean;
   isUpdating: boolean;
 }
 
 const MarqueeTicker = () => {
   const [prices, setPrices] = useState<ForexPrice[]>([
-    { pair: "EUR/USD", symbol: "OANDA:EUR_USD", rate: 0, change: 0, changePercent: 0, previousRate: 0, isPositive: true, isUpdating: false },
-    { pair: "GBP/USD", symbol: "OANDA:GBP_USD", rate: 0, change: 0, changePercent: 0, previousRate: 0, isPositive: true, isUpdating: false },
-    { pair: "USD/JPY", symbol: "OANDA:USD_JPY", rate: 0, change: 0, changePercent: 0, previousRate: 0, isPositive: true, isUpdating: false },
-    { pair: "AUD/USD", symbol: "OANDA:AUD_USD", rate: 0, change: 0, changePercent: 0, previousRate: 0, isPositive: true, isUpdating: false },
-    { pair: "GBP/JPY", symbol: "OANDA:GBP_JPY", rate: 0, change: 0, changePercent: 0, previousRate: 0, isPositive: true, isUpdating: false },
-    { pair: "USD/CAD", symbol: "OANDA:USD_CAD", rate: 0, change: 0, changePercent: 0, previousRate: 0, isPositive: true, isUpdating: false },
-    { pair: "NZD/USD", symbol: "OANDA:NZD_USD", rate: 0, change: 0, changePercent: 0, previousRate: 0, isPositive: true, isUpdating: false },
+    { pair: "EUR/USD", symbol: "OANDA:EUR_USD", rate: 0, change: 0, changePercent: 0, previousRate: 0, baselineRate: 0, isPositive: true, isUpdating: false },
+    { pair: "GBP/USD", symbol: "OANDA:GBP_USD", rate: 0, change: 0, changePercent: 0, previousRate: 0, baselineRate: 0, isPositive: true, isUpdating: false },
+    { pair: "USD/JPY", symbol: "OANDA:USD_JPY", rate: 0, change: 0, changePercent: 0, previousRate: 0, baselineRate: 0, isPositive: true, isUpdating: false },
+    { pair: "AUD/USD", symbol: "OANDA:AUD_USD", rate: 0, change: 0, changePercent: 0, previousRate: 0, baselineRate: 0, isPositive: true, isUpdating: false },
+    { pair: "GBP/JPY", symbol: "OANDA:GBP_JPY", rate: 0, change: 0, changePercent: 0, previousRate: 0, baselineRate: 0, isPositive: true, isUpdating: false },
+    { pair: "USD/CAD", symbol: "OANDA:USD_CAD", rate: 0, change: 0, changePercent: 0, previousRate: 0, baselineRate: 0, isPositive: true, isUpdating: false },
+    { pair: "NZD/USD", symbol: "OANDA:NZD_USD", rate: 0, change: 0, changePercent: 0, previousRate: 0, baselineRate: 0, isPositive: true, isUpdating: false },
   ]);
   
   const [isConnected, setIsConnected] = useState(false);
@@ -56,13 +57,17 @@ const MarqueeTicker = () => {
               prevPrices.map(price => {
                 if (price.symbol === trade.s) {
                   const newRate = trade.p;
-                  const change = newRate - (price.rate || newRate);
-                  const changePercent = price.rate ? ((change / price.rate) * 100) : 0;
+                  // Set baseline rate on first update
+                  const baseline = price.baselineRate || newRate;
+                  // Calculate change from baseline
+                  const change = newRate - baseline;
+                  const changePercent = baseline ? ((change / baseline) * 100) : 0;
                   
                   return {
                     ...price,
                     previousRate: price.rate || newRate,
                     rate: newRate,
+                    baselineRate: baseline,
                     change,
                     changePercent,
                     isPositive: change >= 0,
