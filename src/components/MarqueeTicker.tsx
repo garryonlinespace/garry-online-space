@@ -32,6 +32,42 @@ const MarqueeTicker = () => {
   const reconnectAttemptsRef = useRef(0);
   const maxReconnectAttempts = 5;
 
+  // Fetch previous closing prices for all pairs
+  useEffect(() => {
+    const fetchPreviousClosePrices = async () => {
+      const yesterday = new Date();
+      yesterday.setDate(yesterday.getDate() - 1);
+      const timestampTo = Math.floor(yesterday.getTime() / 1000);
+      const timestampFrom = timestampTo - (24 * 60 * 60); // 24 hours before
+
+      for (const price of prices) {
+        try {
+          const response = await fetch(
+            `https://finnhub.io/api/v1/forex/candle?symbol=${price.symbol}&resolution=D&from=${timestampFrom}&to=${timestampTo}&token=${FINNHUB_API_KEY}`
+          );
+          const data = await response.json();
+          
+          if (data.c && data.c.length > 0) {
+            // Get the last closing price from the response
+            const previousClose = data.c[data.c.length - 1];
+            
+            setPrices(prevPrices =>
+              prevPrices.map(p =>
+                p.symbol === price.symbol
+                  ? { ...p, baselineRate: previousClose }
+                  : p
+              )
+            );
+          }
+        } catch (error) {
+          console.error(`Error fetching previous close for ${price.pair}:`, error);
+        }
+      }
+    };
+
+    fetchPreviousClosePrices();
+  }, []);
+
   useEffect(() => {
     const connectWebSocket = () => {
       const ws = new WebSocket(`wss://ws.finnhub.io?token=${FINNHUB_API_KEY}`);
