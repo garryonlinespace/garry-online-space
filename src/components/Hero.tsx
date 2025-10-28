@@ -51,21 +51,7 @@ const Hero = () => {
 
   return (
     <section className="relative">
-      <div className="relative py-12 md:py-16 lg:py-20 overflow-hidden bg-[#1a1a2e]">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 opacity-60"
-          style={{
-            backgroundImage: `url(${tradingChartHero})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-          }}
-        />
-        
-        {/* Blue Overlay */}
-        <div className="absolute inset-0 bg-[#1e40af] opacity-20" />
-        
+      <div className="relative py-12 md:py-16 lg:py-20 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col items-center justify-center gap-8 lg:gap-10 text-center">
             <div className="text-white animate-fade-in w-full max-w-4xl">

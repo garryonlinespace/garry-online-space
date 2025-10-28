@@ -12,13 +12,13 @@ const Index = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main>
-        <Hero />
         <div 
           className="relative bg-cover bg-center bg-fixed"
           style={{ backgroundImage: `url(${tradingBg})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/60"></div>
+          <div className="absolute inset-0 bg-[#1e40af] opacity-30"></div>
           <div className="relative z-10">
+            <Hero />
             <Services />
             <Testimonials />
             <CTASection />
