@@ -2,12 +2,14 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import MarqueeTicker from "@/components/MarqueeTicker";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <header className="bg-primary sticky top-0 z-50 shadow-md">
+      <MarqueeTicker />
       <div className="py-4">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center gap-2">

@@ -1,6 +1,5 @@
 
 import Navbar from "@/components/Navbar";
-import MarqueeTicker from "@/components/MarqueeTicker";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
@@ -11,7 +10,6 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <MarqueeTicker />
       <main>
         <Hero />
         <Services />
