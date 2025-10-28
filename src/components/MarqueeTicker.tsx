@@ -118,9 +118,12 @@ const MarqueeTicker = () => {
 
     return () => {
       if (wsRef.current) {
-        prices.forEach(price => {
-          wsRef.current?.send(JSON.stringify({ type: "unsubscribe", symbol: price.symbol }));
-        });
+        // Only send unsubscribe if WebSocket is in OPEN state
+        if (wsRef.current.readyState === WebSocket.OPEN) {
+          prices.forEach(price => {
+            wsRef.current?.send(JSON.stringify({ type: "unsubscribe", symbol: price.symbol }));
+          });
+        }
         wsRef.current.close();
       }
       if (reconnectTimeoutRef.current) {
