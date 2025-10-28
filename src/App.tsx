@@ -11,6 +11,8 @@ import Courses from "./pages/Courses";
 import GetStarted from "./pages/GetStarted";
 import MentorMasterminder from "./pages/MentorMasterminder";
 import MentorDrema from "./pages/MentorDrema";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Terms from "./pages/Terms";
 
 // Service Pages
 import ForexTrading from "./pages/services/ForexTrading";
@@ -49,6 +51,8 @@ const App = () => (
           <Route path="/betting-tips" element={<BettingTips />} />
           <Route path="/affiliate-marketing" element={<AffiliateMarketing />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms" element={<Terms />} />
           
           {/* Payment Routes */}
           <Route path="/forex-payment" element={<ForexPayment />} />

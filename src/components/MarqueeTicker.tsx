@@ -32,41 +32,7 @@ const MarqueeTicker = () => {
   const reconnectAttemptsRef = useRef(0);
   const maxReconnectAttempts = 5;
 
-  // Fetch previous closing prices for all pairs
-  useEffect(() => {
-    const fetchPreviousClosePrices = async () => {
-      const yesterday = new Date();
-      yesterday.setDate(yesterday.getDate() - 1);
-      const timestampTo = Math.floor(yesterday.getTime() / 1000);
-      const timestampFrom = timestampTo - (24 * 60 * 60); // 24 hours before
-
-      for (const price of prices) {
-        try {
-          const response = await fetch(
-            `https://finnhub.io/api/v1/forex/candle?symbol=${price.symbol}&resolution=D&from=${timestampFrom}&to=${timestampTo}&token=${FINNHUB_API_KEY}`
-          );
-          const data = await response.json();
-          
-          if (data.c && data.c.length > 0) {
-            // Get the last closing price from the response
-            const previousClose = data.c[data.c.length - 1];
-            
-            setPrices(prevPrices =>
-              prevPrices.map(p =>
-                p.symbol === price.symbol
-                  ? { ...p, baselineRate: previousClose }
-                  : p
-              )
-            );
-          }
-        } catch (error) {
-          console.error(`Error fetching previous close for ${price.pair}:`, error);
-        }
-      }
-    };
-
-    fetchPreviousClosePrices();
-  }, []);
+  // No need for separate API calls - we'll use first WebSocket data as baseline
 
   useEffect(() => {
     const connectWebSocket = () => {
@@ -89,12 +55,12 @@ const MarqueeTicker = () => {
         
         if (data.type === "trade" && data.data) {
           data.data.forEach((trade: { s: string; p: number }) => {
-            setPrices(prevPrices => 
+              setPrices(prevPrices => 
               prevPrices.map(price => {
                 if (price.symbol === trade.s) {
                   const newRate = trade.p;
-                  // Set baseline rate on first update
-                  const baseline = price.baselineRate || newRate;
+                  // Use first received price as baseline if not set
+                  const baseline = price.baselineRate !== 0 ? price.baselineRate : newRate;
                   // Calculate change from baseline
                   const change = newRate - baseline;
                   const changePercent = baseline ? ((change / baseline) * 100) : 0;
