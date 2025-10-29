@@ -13,10 +13,10 @@ const Index = () => {
       <Navbar />
       <main>
         <div 
-          className="relative bg-cover bg-center bg-fixed"
+          className="relative bg-cover bg-center"
           style={{ backgroundImage: `url(${tradingBg})` }}
         >
-          <div className="absolute inset-0 bg-[#1e40af] opacity-30"></div>
+          <div className="absolute inset-0 bg-black opacity-40"></div>
           <div className="relative z-10">
             <Hero />
             <Services />
