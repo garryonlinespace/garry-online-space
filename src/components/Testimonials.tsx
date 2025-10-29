@@ -79,7 +79,7 @@ const Testimonials = () => {
           <div className="flex gap-6 transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${(activeIndex / 3) * 100}%)` }}>
             {testimonials.map((testimonial) => (
               <div key={testimonial.id} className="flex-shrink-0 w-full md:w-1/3 px-3">
-                <Card className="bg-white/10 backdrop-blur-sm border-0 overflow-hidden transform transition-all duration-500 hover:scale-105 h-full">
+                <Card className="backdrop-blur-sm border-0 overflow-hidden transform transition-all duration-500 hover:scale-105 h-full" style={{ backgroundColor: '#1e40af' }}>
                   <CardContent className="p-6">
                     <div className="flex items-center mb-4">
                       <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-primary font-bold text-xl">

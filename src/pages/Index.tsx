@@ -11,19 +11,11 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main>
-        <div 
-          className="relative bg-cover bg-center"
-          style={{ backgroundImage: `url(${tradingBg})` }}
-        >
-          <div className="absolute inset-0 bg-black opacity-40"></div>
-          <div className="relative z-10">
-            <Hero />
-            <Services />
-            <Testimonials />
-            <CTASection />
-          </div>
-        </div>
+      <main className="bg-black">
+        <Hero />
+        <Services />
+        <Testimonials />
+        <CTASection />
       </main>
       <Footer />
     </div>
