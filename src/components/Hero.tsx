@@ -88,11 +88,8 @@ const Hero = () => {
           <div className="flex flex-col items-center justify-center gap-8 lg:gap-10 text-center">
             <div className="text-white animate-fade-in w-full max-w-4xl">
               <AnimatedText />
-              <p className="text-base sm:text-lg mb-6 max-w-2xl mx-auto text-white/90">
-                Learn how to make money online with our expert-led courses. We offer comprehensive training on various online businesses and income opportunities.
-              </p>
               <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center items-center">
-                <Button asChild className="w-fit bg-white hover:bg-white/90 text-[#fbbf24] font-bold text-sm sm:text-base px-5 sm:px-6 py-4 sm:py-5 rounded-full border-2" style={{ borderColor: '#fbbf24' }}>
+                <Button asChild className="w-fit bg-white hover:bg-white/90 text-[#fbbf24] font-bold text-sm sm:text-base px-5 sm:px-6 py-4 sm:py-5 rounded-full animate-neon-glow">
                   <Link to="/get-started">Get Started</Link>
                 </Button>
                 <Button asChild className="w-fit bg-[#fbbf24] hover:bg-[#fbbf24]/90 text-[#1e40af] font-bold text-sm sm:text-base px-5 sm:px-6 py-4 sm:py-5 rounded-full border-0">
