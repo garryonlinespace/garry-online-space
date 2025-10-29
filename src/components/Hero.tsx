@@ -3,6 +3,38 @@ import { Link } from "react-router-dom";
 import tradingChartHero from "@/assets/trading-chart-hero.jpg";
 import { useEffect, useState } from "react";
 
+const AnimatedText = () => {
+  const words = ["Forex Trading", "Crypto Trading", "Affiliate Marketing"];
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsVisible(false);
+      setTimeout(() => {
+        setCurrentWordIndex((prev) => (prev + 1) % words.length);
+        setIsVisible(true);
+      }, 500);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8">
+      Do you want to learn{" "}
+      <span 
+        className={`transition-opacity duration-500 inline-block ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+        style={{ color: '#fbbf24' }}
+      >
+        {words[currentWordIndex]}
+      </span>
+      ?<br />
+      You're in the right place.
+    </h1>
+  );
+};
+
 const Hero = () => {
   const [students, setStudents] = useState(0);
   const [courses, setCourses] = useState(1);
@@ -55,15 +87,7 @@ const Hero = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex flex-col items-center justify-center gap-8 lg:gap-10 text-center">
             <div className="text-white animate-fade-in w-full max-w-4xl">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
-                Welcome to <span className="text-secondary">Garry Online Space</span>
-              </h1>
-              <p className="text-lg sm:text-xl md:text-2xl font-semibold mb-4 md:mb-6">
-                <span className="italic">"Online is the future"</span>
-              </p>
-              <p className="text-base sm:text-lg mb-6 md:mb-8 max-w-2xl mx-auto">
-                Learn how to make money online with our expert-led courses. We offer comprehensive training on various online businesses and income opportunities.
-              </p>
+              <AnimatedText />
               <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 justify-center items-center">
                 <Button asChild className="w-fit bg-white hover:bg-white/90 text-[#fbbf24] font-bold text-sm sm:text-base px-5 sm:px-6 py-4 sm:py-5 rounded-full animate-neon-glow">
                   <Link to="/get-started">Get Started</Link>
