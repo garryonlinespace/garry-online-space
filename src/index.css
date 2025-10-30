@@ -128,12 +128,12 @@
 
 @keyframes neon-border {
   0%, 100% {
-    border-color: #1e40af;
-    box-shadow: 0 0 5px #1e40af, 0 0 10px #1e40af, 0 0 15px #1e40af;
+    border-color: #fbbf24;
+    box-shadow: 0 0 5px #fbbf24, 0 0 10px #fbbf24, 0 0 15px #fbbf24;
   }
   50% {
-    border-color: #1e40af;
-    box-shadow: 0 0 10px #1e40af, 0 0 20px #1e40af, 0 0 30px #1e40af;
+    border-color: #fbbf24;
+    box-shadow: 0 0 10px #fbbf24, 0 0 20px #fbbf24, 0 0 30px #fbbf24;
   }
 }
 
