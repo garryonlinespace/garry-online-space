@@ -11,7 +11,7 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="bg-black">
+      <main style={{ backgroundColor: '#1a1a1a' }}>
         <Hero />
         <Services />
         <Testimonials />

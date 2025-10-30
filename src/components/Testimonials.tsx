@@ -48,22 +48,44 @@ const testimonials = [
 
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => 
-        prevIndex + 3 >= testimonials.length ? 0 : prevIndex + 3
-      );
-    }, 5000); // Auto-slide every 5 seconds
-
-    return () => clearInterval(interval);
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const visibleTestimonials = testimonials.slice(activeIndex, activeIndex + 3);
-  // If we don't have enough testimonials at the end, wrap around
-  if (visibleTestimonials.length < 3) {
-    visibleTestimonials.push(...testimonials.slice(0, 3 - visibleTestimonials.length));
-  }
+  useEffect(() => {
+    const itemsPerSlide = isMobile ? 1 : 3;
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => 
+        prevIndex + 1 >= testimonials.length ? 0 : prevIndex + 1
+      );
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [isMobile]);
+
+  const getVisibleTestimonials = () => {
+    const itemsPerSlide = isMobile ? 1 : 3;
+    const visible = [];
+    
+    for (let i = 0; i < itemsPerSlide; i++) {
+      const index = (activeIndex + i) % testimonials.length;
+      visible.push(testimonials[index]);
+    }
+    
+    return visible;
+  };
+
+  const visibleTestimonials = getVisibleTestimonials();
+  const itemsPerSlide = isMobile ? 1 : 3;
+  const totalSlides = testimonials.length;
 
   return (
     <section className="py-16 text-white">
@@ -76,10 +98,19 @@ const Testimonials = () => {
         </div>
         
         <div className="relative overflow-hidden">
-          <div className="flex gap-6 transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${(activeIndex / 3) * 100}%)` }}>
+          <div 
+            className="flex gap-4 md:gap-6 transition-transform duration-700 ease-in-out"
+            style={{ 
+              transform: `translateX(-${(activeIndex * (100 / itemsPerSlide))}%)`,
+              willChange: 'transform'
+            }}
+          >
             {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="flex-shrink-0 w-full md:w-1/3 px-3">
-                <Card className="backdrop-blur-sm border-0 overflow-hidden transform transition-all duration-500 hover:scale-105 h-full" style={{ backgroundColor: '#1e40af' }}>
+              <div 
+                key={testimonial.id} 
+                className={`flex-shrink-0 ${isMobile ? 'w-full' : 'w-1/3'} px-2`}
+              >
+                <Card className="backdrop-blur-sm border-0 overflow-hidden h-full" style={{ backgroundColor: '#1e40af' }}>
                   <CardContent className="p-6">
                     <div className="flex items-center mb-4">
                       <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-primary font-bold text-xl">
@@ -104,14 +135,14 @@ const Testimonials = () => {
         </div>
         
         <div className="flex justify-center mt-8 gap-2">
-          {Array(Math.ceil(testimonials.length / 3)).fill(0).map((_, i) => (
+          {Array(totalSlides).fill(0).map((_, i) => (
             <button
               key={i}
-              onClick={() => setActiveIndex(i * 3)}
-              className={`w-3 h-3 rounded-full transition-all ${
-                Math.floor(activeIndex / 3) === i 
+              onClick={() => setActiveIndex(i)}
+              className={`h-2 rounded-full transition-all ${
+                activeIndex === i 
                   ? 'bg-secondary w-8' 
-                  : 'bg-white/30 hover:bg-white/50'
+                  : 'bg-white/30 hover:bg-white/50 w-2'
               }`}
               aria-label={`Go to slide ${i + 1}`}
             />
