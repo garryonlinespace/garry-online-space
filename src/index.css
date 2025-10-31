@@ -124,6 +124,8 @@
 
 .animate-neon-glow {
   animation: neon-glow 1.5s ease-in-out infinite;
+  will-change: box-shadow;
+  transform: translateZ(0);
 }
 
 @keyframes neon-border {
