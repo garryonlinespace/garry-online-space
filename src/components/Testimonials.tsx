@@ -61,31 +61,19 @@ const Testimonials = () => {
   }, []);
 
   useEffect(() => {
-    const itemsPerSlide = isMobile ? 1 : 3;
     const interval = setInterval(() => {
-      setActiveIndex((prevIndex) => 
-        prevIndex + 1 >= testimonials.length ? 0 : prevIndex + 1
-      );
+      setActiveIndex((prevIndex) => {
+        const itemsPerSlide = isMobile ? 1 : 3;
+        const maxIndex = testimonials.length - itemsPerSlide;
+        return prevIndex >= maxIndex ? 0 : prevIndex + 1;
+      });
     }, 4000);
 
     return () => clearInterval(interval);
   }, [isMobile]);
 
-  const getVisibleTestimonials = () => {
-    const itemsPerSlide = isMobile ? 1 : 3;
-    const visible = [];
-    
-    for (let i = 0; i < itemsPerSlide; i++) {
-      const index = (activeIndex + i) % testimonials.length;
-      visible.push(testimonials[index]);
-    }
-    
-    return visible;
-  };
-
-  const visibleTestimonials = getVisibleTestimonials();
   const itemsPerSlide = isMobile ? 1 : 3;
-  const totalSlides = testimonials.length;
+  const totalSlides = isMobile ? testimonials.length : testimonials.length - 2;
 
   return (
     <section className="py-16 text-white">
@@ -99,9 +87,9 @@ const Testimonials = () => {
         
         <div className="relative overflow-hidden">
           <div 
-            className="flex gap-4 md:gap-6 transition-transform duration-700 ease-in-out"
+            className="flex gap-4 md:gap-6 transition-all duration-500 ease-out"
             style={{ 
-              transform: `translateX(-${(activeIndex * (100 / itemsPerSlide))}%)`,
+              transform: `translateX(-${activeIndex * (isMobile ? 100 : 33.333)}%)`,
               willChange: 'transform'
             }}
           >
