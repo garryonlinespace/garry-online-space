@@ -30,7 +30,7 @@ const AnimatedText = () => {
         {words[currentWordIndex]}
       </span>
       ?<br />
-      You're in the right place.
+      <span className="animate-aurora">You're in the right place.</span>
     </h1>
   );
 };

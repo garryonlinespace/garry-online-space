@@ -143,3 +143,31 @@
   animation: neon-border-pulse 2s ease-in-out infinite;
   will-change: box-shadow;
 }
+
+@keyframes aurora {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-aurora {
+  background: linear-gradient(
+    90deg,
+    #fbbf24,
+    #3b82f6,
+    #8b5cf6,
+    #ec4899,
+    #fbbf24
+  );
+  background-size: 200% 200%;
+  animation: aurora 4s ease-in-out infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
