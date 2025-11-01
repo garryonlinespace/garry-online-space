@@ -48,44 +48,16 @@ const testimonials = [
 
 const Testimonials = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  useEffect(() => {
-    const itemsPerSlide = isMobile ? 1 : 3;
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => 
-        prevIndex + 1 >= testimonials.length ? 0 : prevIndex + 1
+        (prevIndex + 1) % testimonials.length
       );
-    }, 4000);
+    }, 5000);
 
     return () => clearInterval(interval);
-  }, [isMobile]);
-
-  const getVisibleTestimonials = () => {
-    const itemsPerSlide = isMobile ? 1 : 3;
-    const visible = [];
-    
-    for (let i = 0; i < itemsPerSlide; i++) {
-      const index = (activeIndex + i) % testimonials.length;
-      visible.push(testimonials[index]);
-    }
-    
-    return visible;
-  };
-
-  const visibleTestimonials = getVisibleTestimonials();
-  const itemsPerSlide = isMobile ? 1 : 3;
-  const totalSlides = testimonials.length;
+  }, []);
 
   return (
     <section className="py-16 text-white">
@@ -97,21 +69,21 @@ const Testimonials = () => {
           </p>
         </div>
         
-        <div className="relative overflow-hidden">
+        <div className="relative max-w-2xl mx-auto overflow-hidden">
           <div 
-            className="flex gap-4 md:gap-6 transition-transform duration-700 ease-in-out"
+            className="flex transition-transform duration-700 ease-in-out"
             style={{ 
-              transform: `translateX(-${(activeIndex * (100 / itemsPerSlide))}%)`,
+              transform: `translateX(-${activeIndex * 100}%)`,
               willChange: 'transform'
             }}
           >
             {testimonials.map((testimonial) => (
               <div 
                 key={testimonial.id} 
-                className={`flex-shrink-0 ${isMobile ? 'w-full' : 'w-1/3'} px-2`}
+                className="w-full flex-shrink-0 px-4"
               >
                 <Card className="backdrop-blur-sm border-0 overflow-hidden h-full" style={{ backgroundColor: '#1e40af' }}>
-                  <CardContent className="p-6">
+                  <CardContent className="p-6 md:p-8">
                     <div className="flex items-center mb-4">
                       <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-primary font-bold text-xl">
                         {testimonial.name.charAt(0)}
@@ -135,7 +107,7 @@ const Testimonials = () => {
         </div>
         
         <div className="flex justify-center mt-8 gap-2">
-          {Array(totalSlides).fill(0).map((_, i) => (
+          {testimonials.map((_, i) => (
             <button
               key={i}
               onClick={() => setActiveIndex(i)}

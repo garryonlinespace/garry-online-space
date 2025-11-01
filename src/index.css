@@ -113,22 +113,22 @@
   animation: marquee 50s linear infinite;
 }
 
-@keyframes neon-glow {
+@keyframes neon-glow-blue {
   0%, 100% {
-    box-shadow: 0 0 5px #fbbf24, 0 0 10px #fbbf24, 0 0 20px #fbbf24, 0 0 30px #fbbf24;
+    box-shadow: 0 0 5px #1e40af, 0 0 10px #1e40af, 0 0 20px #1e40af, 0 0 30px #1e40af;
   }
   50% {
-    box-shadow: 0 0 10px #fbbf24, 0 0 20px #fbbf24, 0 0 30px #fbbf24, 0 0 40px #fbbf24;
+    box-shadow: 0 0 10px #1e40af, 0 0 20px #1e40af, 0 0 30px #1e40af, 0 0 40px #1e40af;
   }
 }
 
-.animate-neon-glow {
-  animation: neon-glow 1.5s ease-in-out infinite;
+.animate-neon-glow-blue {
+  animation: neon-glow-blue 1.5s ease-in-out infinite;
   will-change: box-shadow;
   transform: translateZ(0);
 }
 
-@keyframes neon-border {
+@keyframes neon-border-pulse {
   0%, 100% {
     border-color: #fbbf24;
     box-shadow: 0 0 5px #fbbf24, 0 0 10px #fbbf24, 0 0 15px #fbbf24;
@@ -139,7 +139,7 @@
   }
 }
 
-.animate-neon-border {
-  animation: neon-border 2s ease-in-out infinite;
+.animate-neon-border-pulse {
+  animation: neon-border-pulse 2s ease-in-out infinite;
   will-change: box-shadow;
 }

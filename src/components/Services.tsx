@@ -71,7 +71,7 @@ const Services = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
-            <Card key={service.id} className="border-2 hover:shadow-lg transition-all bg-white/95 backdrop-blur-sm overflow-hidden relative animate-neon-glow" style={{ borderColor: '#1e40af', boxShadow: '0 0 20px rgba(30, 64, 175, 0.5), inset 0 0 20px rgba(30, 64, 175, 0.1)' }}>
+            <Card key={service.id} className="border-2 hover:shadow-lg transition-all bg-white/95 backdrop-blur-sm overflow-hidden relative" style={{ borderColor: '#fbbf24' }}>
               <CardHeader className="pb-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                   <service.icon className="text-primary h-6 w-6" />
