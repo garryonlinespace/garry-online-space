@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { MessageSquare } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import mentorIsiahPlaceholder from "@/assets/mentor-isiah-placeholder.jpg";
 
 const MentorDrema = () => {
   const handleContactWhatsApp = () => {
@@ -26,10 +27,10 @@ const MentorDrema = () => {
         <section className="py-12 md:py-16">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
-              <div className="w-full md:w-1/2">
-                <Avatar className="w-full max-w-sm mx-auto aspect-square h-auto rounded-full border-4 border-primary">
+              <div className="w-full md:w-1/2 flex justify-center">
+                <Avatar className="w-64 h-64 rounded-full border-4 border-primary">
                   <AvatarImage 
-                    src="/lovable-uploads/d94f86ad-d350-4130-8c2b-6f04f876e8f6.png"
+                    src={mentorIsiahPlaceholder}
                     alt="Mentor Isiah" 
                     className="object-cover"
                   />
