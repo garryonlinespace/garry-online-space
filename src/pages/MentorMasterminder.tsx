@@ -4,7 +4,6 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Phone, Instagram, MessageSquare } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import mentorMasterminderPlaceholder from "@/assets/mentor-masterminder-placeholder.jpg";
 
 const MentorMasterminder = () => {
   const handleContactWhatsApp = () => {
@@ -35,10 +34,10 @@ const MentorMasterminder = () => {
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row gap-12 items-center">
-              <div className="md:w-1/2 flex justify-center">
-                <Avatar className="w-64 h-64 rounded-full border-4 border-primary">
+              <div className="md:w-1/2">
+                <Avatar className="w-full aspect-square h-auto rounded-full border-4 border-primary">
                   <AvatarImage 
-                    src={mentorMasterminderPlaceholder}
+                    src="/lovable-uploads/9d7a1583-4128-4bc9-a415-3aaf7158fe96.png"
                     alt="Mentor MasterMinder" 
                     className="object-cover"
                   />
